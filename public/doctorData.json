@@ -1,0 +1,20 @@
+[
+  {
+    "key": 1,
+    "name": "Dr. Joseph Phillips",
+    "title": "Senior Doctor",
+    "img": "https://images.unsplash.com/photo-1527613426441-4da17471b66d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=852&q=80"
+  },
+  {
+    "key": 2,
+    "name": "Dr. Marta Green",
+    "title": "Senior Doctor",
+    "img": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80"
+  },
+  {
+    "key": 3,
+    "name": "Dr. Edward Grey",
+    "title": "Senior Doctor",
+    "img": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+  }
+]

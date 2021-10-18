@@ -1,0 +1,9 @@
+.text-responsive{
+    font-size: 40px;
+    padding-top: 50px;
+}
+@media (max-width: 576px) {
+    .text-responsive{
+     font-size: 14px;
+    }
+}

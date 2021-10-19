@@ -4,7 +4,7 @@ import FirebaseInitialize from "../Firebase/Firebase.init"
 FirebaseInitialize();
 const UseFirebase = () => {
     const [user, setUser] = useState({})
-    const [isLoading, setIsLoading] = useState(true);
+    const [loading, setLoading] = useState(true);
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     
@@ -17,10 +17,21 @@ const UseFirebase = () => {
             .then(result => {
                 setUser({});
             })
-            .finally(() => setIsLoading(false));
+            .finally(() => setLoading(false));
     }
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user);
+            }
+            else {
+                setUser({})
+            }
+            setLoading(false);
+        });
+    }, []);
     // useEffect(() => {
-    //     onAuthStateChanged(auth, (user) => {
+    //     const unsubscribed = onAuthStateChanged(auth, user => {
     //         if (user) {
     //             setUser(user);
     //         }
@@ -29,24 +40,13 @@ const UseFirebase = () => {
     //         }
     //         setIsLoading(false);
     //     });
-    // }, []);
-    useEffect(() => {
-        const unsubscribed = onAuthStateChanged(auth, user => {
-            if (user) {
-                setUser(user);
-            }
-            else {
-                setUser({})
-            }
-            setIsLoading(false);
-        });
-        return () => unsubscribed;
-    }, [])
+    //     return () => unsubscribed;
+    // }, [])
     return {
         googleLoginHandler,
         user,
         logOut,
-        isLoading
+        loading
         
 
     }
